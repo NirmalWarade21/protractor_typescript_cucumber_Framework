@@ -7,7 +7,7 @@
     "test": "protractor JSFiles/Configuration.js",
     "pretest": "tsc",
     "protractor": "./node_modules/protractor/built/cli.js",
-    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+    "webdriver-update": "npx webdriver-manager update"
   },
   "author": "Nirmal Warade",
   "license": "ISC",
