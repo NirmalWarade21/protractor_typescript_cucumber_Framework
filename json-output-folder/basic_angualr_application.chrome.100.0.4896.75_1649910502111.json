@@ -1,0 +1,92 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Basic Angualr application",
+    "line": 1,
+    "id": "basic-angualr-application",
+    "tags": [],
+    "uri": "Features\\Test1.feature",
+    "elements": [
+      {
+        "id": "basic-angualr-application;basic-functions",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "basic functions",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I launch the url \"https://material.angular.io/components/table/overview\"",
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4477000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "again Button click",
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10023000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "100.0.4896.75"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]
