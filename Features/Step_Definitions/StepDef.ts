@@ -1,28 +1,74 @@
 import { Given, When, Then, Before, After, Status } from "cucumber"
-import { browser, element, by, Runner } from "protractor"
+import { browser, element, by, Runner, ExpectedConditions } from "protractor"
 import chai from "chai";
 
 import { Basic } from "../../PageObjects/Basic";
 import { Utils } from "../../Utilities/UtiliesMethods";
 
+import { lib } from "../../Utilities/lib";
+
 var expect = chai.expect;
- let objBasic = new Basic();
 
+var text: string = "Components";
 
- Given('I launch the url {string}', { timeout: 60 * 1000 }, async function (url) {
+Given('I launch the url {string}', { timeout: 60 * 1000 }, async function (url) {
 
-    //await utils.openBrowser(url);
     await Utils.openBrowser(url);
 
 })
 
 
-When('again Button click', { timeout: 60 * 1000 }, async function () {
+When('again Button click', { timeout: 60 * 100000 }, async function () {
 
-    // await utils.click(objBasic.Butonclick);
-    await Utils.click(objBasic.Butonclick);
+
+    //await Utils.click(Basic.menu(lib.PropertiesFileReader("menuname")));
+    // var aa = await Basic.getCount();
+    //   var aa= await  Basic.getdata(1,2);
+    //  console.log("count is  = " + aa)
+
+
+    await browser.executeScript('window.scrollTo(0,10000)');
+    console.log("scroll");
+     await browser.sleep(10000);
+
+   // await browser.executeScript('arguments[0].scrollIntoView(true)', Basic.searchBar.getWebElement());
+
+    //await Utils.click(Basic.searchBar);
+
+
+
+
+
+
+
+
+
+
+
+    // await Utils.waitForElementVisible((Basic.searchBar));
+    //let EC = ExpectedConditions;
+    // browser.manage().timeouts().implicitlyWait(5000);
+    // let condition = EC.presenceOf(element(by.id("Basic.searchBar")))
+    // browser.wait(condition, 30000)
+
+
+    // var Data  = lib.ExcelDataReader("DataFiles/Exceldata.xlsx","Sheet1");
+
+    //console.log(Data)
+    // expect(Data).to.equal('this is last row');
+
+
+
 
 })
+
+
+
+
+
+
+
+
 
 
 
@@ -38,3 +84,7 @@ After(async function (scenario) {
     }
 
 })
+
+
+
+

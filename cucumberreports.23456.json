@@ -1,0 +1,81 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Basic Angualr application",
+    "line": 1,
+    "id": "basic-angualr-application",
+    "tags": [],
+    "uri": "Features\\Test1.feature",
+    "elements": [
+      {
+        "id": "basic-angualr-application;basic-functions",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "basic functions",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 249000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I launch the url \"https://material.angular.io/components/table/overview\"",
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7005000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "again Button click",
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 290000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "Features\\Step_Definitions\\StepDef.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

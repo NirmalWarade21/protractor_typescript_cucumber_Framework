@@ -4,9 +4,17 @@ import * as reporter from "cucumber-html-reporter"
 export let config: Config = {
     directConnect: true,
     framework: 'custom',
-   
+
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
+    /* //cross browser testing 
+       multiCapabilities: [{
+            'browserName': 'chrome',
+          },
+          {
+            'browserName': 'firefox'
+          }],
+        */
     Capabilities: {
         browserName: 'chrome'
     },
@@ -17,11 +25,11 @@ export let config: Config = {
         // require: 'Features/Step_Definitions/StepDef.js',
         format: 'json:./cucumberreports.json',
         "module": "commonjs",
-"outDir": "./out-tsc/spec",
-"types": ["jest", "node"],
+        "outDir": "./out-tsc/spec",
+        "types": ["jest", "node"],
         // format: ['progress', 'pretty:output.txt'],
         //format:'pretty:./cucumberreports2.txt',
-       
+
         onComplete: () => {
             //var reporter = require('cucumber-html-reporter');
 
@@ -45,13 +53,13 @@ export let config: Config = {
             reporter.generate(options);
 
         },
-       
-        
+
+
         require: [
             'Features/Step_Definitions/StepDef.js'
         ]
     },
-    
+
     plugins: [{
         package: require.resolve('protractor-multiple-cucumber-html-reporter-plugin'),
 
@@ -69,7 +77,7 @@ export let config: Config = {
                 ]
             }
         },
-       
+
     },
     {
         package: 'protractor-highlight-plugin',
@@ -78,8 +86,8 @@ export let config: Config = {
             focusTime: 450,
             includeEvents: ['click', 'keydown', 'dblclick', 'textInput']
         }
-   }
-],
-    
-    
+    }
+    ],
+
+
 }
