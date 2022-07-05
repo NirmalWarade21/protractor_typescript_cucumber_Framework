@@ -55,15 +55,31 @@ export class Utils {
         }
     }
 
+
+    static  mouseDown(byElement: any) {
+        try {
+
+            //await Utils.waitForElement(byElement);
+
+browser.actions().mouseDown((byElement).getWebElement()).perform()
+            
+            log.info("element scrolled successful: ");
+             lib.screenshot();
+            log.info("Screenshot taken !!! ");
+            browser.sleep(3000);
+        } catch (ex) {
+            log.error("Error While element click :  " + ex);
+        }
+    }
     //---------------send keys ----------------------
 
-    static async sendKeys(byElement: any, text: string) {
+    static  sendKeys(byElement: any, text: string) {
         try {
             //await Utils.waitForElement(byElement);
 
-            await byElement.sendKeys(text);
+             byElement.sendKeys(text);
             log.info("Send keys successful : ");
-            await lib.screenshot();
+             lib.screenshot();
             log.info("Screenshot taken !!! ");
 
 

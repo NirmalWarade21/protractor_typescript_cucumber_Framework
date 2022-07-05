@@ -30,6 +30,11 @@ export class Basic {
 
   }
 
+  static scrolldown(text:any){
+    const comp1 =element(by.xpath(XpathMethods.menuXpath(text)))
+    return comp1;
+  }
+
 
 }
 

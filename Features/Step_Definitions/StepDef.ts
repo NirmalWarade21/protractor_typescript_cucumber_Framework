@@ -13,7 +13,7 @@ var text: string = "Components";
 
 Given('I launch the url {string}', { timeout: 60 * 1000 }, async function (url) {
 
-    await Utils.openBrowser(url);
+    await Utils.openBrowser("www.google.com");
 
 })
 
@@ -21,23 +21,24 @@ Given('I launch the url {string}', { timeout: 60 * 1000 }, async function (url) 
 When('again Button click', { timeout: 60 * 100000 }, async function () {
 
 
-    //await Utils.click(Basic.menu(lib.PropertiesFileReader("menuname")));
+    await Utils.click(Basic.menu(lib.PropertiesFileReader("menuname")));
     // var aa = await Basic.getCount();
     //   var aa= await  Basic.getdata(1,2);
     //  console.log("count is  = " + aa)
 
 
-    await browser.executeScript('window.scrollTo(0,10000)');
-    console.log("scroll");
+    await Utils.mouseDown(Basic.scrolldown("list"))
+    await Utils.click(Basic.scrolldown("input"));
+
      await browser.sleep(10000);
 
    // await browser.executeScript('arguments[0].scrollIntoView(true)', Basic.searchBar.getWebElement());
 
     //await Utils.click(Basic.searchBar);
 
+const cop=element(by.xpath("//input[@type='email']"))
 
-
-
+await Utils.sendKeys(cop,"nirmal");
 
 
 
