@@ -2,5 +2,5 @@
 
 To run project type npm test command 
 
-update the webdriver use command webdriver-manager update --versions.chrome 102
+update the webdriver use command npx webdriver-manager update --versions.chrome 102
 
